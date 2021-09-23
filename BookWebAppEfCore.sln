@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookWebApp", "BookWebApp\BookWebApp.csproj", "{44F431F4-5742-4ECC-A96F-52EFEE021C92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookDAL", "BookDAL\BookDAL.csproj", "{D0B32AB8-AF6A-41FD-9766-FC9FB66007F7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{44F431F4-5742-4ECC-A96F-52EFEE021C92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{44F431F4-5742-4ECC-A96F-52EFEE021C92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{44F431F4-5742-4ECC-A96F-52EFEE021C92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{44F431F4-5742-4ECC-A96F-52EFEE021C92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0B32AB8-AF6A-41FD-9766-FC9FB66007F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0B32AB8-AF6A-41FD-9766-FC9FB66007F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0B32AB8-AF6A-41FD-9766-FC9FB66007F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0B32AB8-AF6A-41FD-9766-FC9FB66007F7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D06BCA8C-10B5-4849-8FA6-6C320482BDD9}
+	EndGlobalSection
+EndGlobal
