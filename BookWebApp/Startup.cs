@@ -1,5 +1,7 @@
 using BookDAL;
 using BookWebApp.Data;
+using BookWebApp.Interface;
+using BookWebApp.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -28,17 +30,23 @@ namespace BookWebApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc();
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
-                    Configuration.GetConnectionString("Default")));
+                    Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
 
             services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
-
+            //****************************************************************
             // Définition du service pour la connectionString qui est la valeur de la propriété "default" dans Appsettings.json
             services.AddDbContext<BookContext>(option => option.UseSqlServer(Configuration.GetConnectionString("Default")));
+
+            // Ajouter le service étendu (portée) IBookService et spécification du type d'implémentation (BookService)
+            services.AddScoped<IBookService, BookService>();
+
+            //*****************************************************************
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

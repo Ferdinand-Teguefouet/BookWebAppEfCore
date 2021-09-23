@@ -1,0 +1,47 @@
+﻿@model IEnumerable<BookWebApp.Models.BookModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>List of books</h1>
+
+<p>
+    <a class="btn btn-outline-success" asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PublishOn)
+            </th>
+            <th>...</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PublishOn)
+            </td>
+            <td>
+                <button class="btn btn-outline-primary"> @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ })</button> |
+                <button class="btn btn-outline-info">@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ })</button> |
+                <button class="btn btn-outline-danger"> @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })</button>
+</td>
+        </tr>
+}
+    </tbody>
+</table>
